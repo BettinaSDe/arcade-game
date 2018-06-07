@@ -3,7 +3,7 @@
 
 const canvas = document.QuerySelector('canvas');
 
-
+let allEnemies = [];
 
 
 
