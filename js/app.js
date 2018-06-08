@@ -62,7 +62,7 @@ render(); {
 
 //Player class: 
 
-superClass; Player
+superclass; Player 
 constructor(col = 3, row = 4) {
 
   this.col = col;
