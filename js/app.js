@@ -14,6 +14,7 @@ window.onload = function() {
 */
 
 let allEnemies = [];
+allEnemies.push(enemy);
 
 let Player = [];
 
