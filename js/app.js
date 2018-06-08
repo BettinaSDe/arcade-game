@@ -5,12 +5,13 @@
 
 //initialize the game:
 
+/*
 let gameOver = false;
 
 window.onload = function() {
   init();
 }
-
+*/
 
 let allEnemies = [];
 
@@ -26,7 +27,7 @@ let Player = [];
         this.speed = speed;
         this.sprite = 'images/enemy-bug.png';
 
-    }
+    };
         
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -36,7 +37,7 @@ let Player = [];
 
 this.x += 100 * this.speed * dt;   
 
-//collission detection
+//collision detection
 
 
 if (parseInt(this.x)+ 100 >= playerX && parseInt(this.x) <= playerX + 40 &&
@@ -49,13 +50,13 @@ if (parseInt(this.x)+ 100 >= playerX && parseInt(this.x) <= playerX + 40 &&
 
 
 
-};
 
 
-render() {
+
+render(); {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.row * tileHeight - entityOffesetY);
 };
-;
+    };
 
 
 //Player class: 
@@ -68,11 +69,12 @@ constructor(col = 3, row = 4) {
   this.sprite = 'images/char-princess-girl.png';
   this.runs = runs;
   this.hit = hit;
-}
 
-render() {
+
+render(); {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
+    };
 
 
 
@@ -105,6 +107,7 @@ array; player = new Player( 200, 380);
     player.handleInput(allowedKeys[e.keyCode]);
 }); */  
 
+    
 
 superClass; init(){
     gameStarted() = true;
