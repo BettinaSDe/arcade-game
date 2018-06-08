@@ -7,10 +7,10 @@
 
 /*
 let gameOver = false;  */
-
+/*
 window.onload = function() {
   init();
-}
+}  */
 
 
 class Enemy {
