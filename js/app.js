@@ -14,8 +14,7 @@ window.onload = function() {
 */
 
 
-var allEnemies = [];
-allEnemies.push(enemy);
+
 
 let Player = [];
 
@@ -30,9 +29,11 @@ let Player = [];
 
     };
         
-    render() {
+    Enemy.prototype.render = function() {
+    
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     };
+    
 
     update(dt) {    
 
@@ -48,10 +49,12 @@ if (parseInt(this.x)+ 100 >= playerX && parseInt(this.x) <= playerX + 40 &&
     window.alert("Game Over");
 
   };   
+    
 
-
-
-
+  var allEnemies = [];
+  allEnemies.push(enemy);
+  
+  const eBug1= new Enemy(0, 220, 60);
 
 
 render(); {
@@ -72,10 +75,11 @@ constructor(col = 3, row = 4) {
   this.hit = hit;
 
 
-render(); {
+Player.prototype.render() = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
     };
+
 
 
 
@@ -89,8 +93,7 @@ render(); {
 
 
 
-
-array; allEnemies = [ new Enemy(-8, 60, 3), new Enemy(0, 140, 10), new Enemy(-5, 300, 15)];
+/*array; allEnemies = [ new Enemy(-8, 60, 3), new Enemy(0, 140, 10), new Enemy(-5, 300, 15)]; */
 
 array; player = new Player( 200, 380);
 
