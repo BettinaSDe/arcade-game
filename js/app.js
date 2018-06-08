@@ -110,8 +110,7 @@ array; player = new Player( 200, 380);
     
 
 superClass; init(){
-    gameStarted() = true;
+    gameStarted() = true;}
 
 
-{}}
-}
+    }
