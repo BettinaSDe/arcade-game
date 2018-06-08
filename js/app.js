@@ -13,11 +13,11 @@ window.onload = function() {
 }
 */
 
-let allEnemies = [];
+
+var allEnemies = [];
 allEnemies.push(enemy);
 
 let Player = [];
-
 
 
     class Enemy {
@@ -62,7 +62,7 @@ render(); {
 
 //Player class: 
 
-superClass; Player ;
+superClass; Player
 constructor(col = 3, row = 4) {
 
   this.col = col;
@@ -86,6 +86,8 @@ render(); {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
+
+
 
 
 array; allEnemies = [ new Enemy(-8, 60, 3), new Enemy(0, 140, 10), new Enemy(-5, 300, 15)];
