@@ -85,23 +85,12 @@ class Enemy {
 
         var allEnemies = [];
 
-        function createEnemies(numEnemies = 3){
+     function createEnemies(numEnemies = 3){
     for (var i = 0; i < numEnemies; i++) {
     enemy = new Enemy;
 
     //position enemy
     enemy.x = getRandomInt(canvasWidth/4) * (-1) - tileWidth;
-    if (i > 2) {
-        enemy.row = getRandomInt(3) + 1;
-    }
-    else {
-        enemy.row = i + 1;
-    }
-    enemy.y = (enemy.row + 1) * tileHeight - entityOffsetY;
-    enemy.speed = 1 + (getRandomInt(5)/15) - (getRandomInt(5)/5) + gameLevel/4;
-    allEnemies.push(enemy);
-}
-}
 
         allEnemies.prototype.render = function () {
             ctx.drawImage(Resources.get(this.sprite), this.x, this.row * tileHeight - entityOffsetY);
@@ -129,4 +118,4 @@ class Enemy {
             gameStarted() = true;
         }
     }
-}}}
+}}}}}
