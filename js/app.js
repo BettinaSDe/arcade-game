@@ -11,6 +11,12 @@ let gameOver = false;  */
 window.onload = function() {
   init();
 }  */
+const canvasWidth = 1000;
+const tileWidth = 200; // required metric
+const tileHeight = 160; // required metric
+
+// calculation
+const entityOffsetY = tileHeight, entityOffsetX = tileWidth/2;
 
 
 class Enemy {
@@ -45,18 +51,18 @@ class Enemy {
                 window.alert("Game Over");
             }
             ;
-            var allEnemies = [];
+           /* var allEnemies = [];
             allEnemies.push(enemy);
             const eBug1 = new Enemy(0, 220, 60);
             render();
             {
-                ctx.drawImage(Resources.get(this.sprite), this.x, this.row * tileHeight - entityOffesetY);
+                ctx.drawImage(Resources.get(this.sprite), this.x, this.row * tileHeight - entityOffsetY);
             }
-            ;
+            ;   */
         }
         ;
         //Player class: 
-        class Enemy {
+        class Player {
             constructor() {
                 constructor(col = 3, row = 4);
         {
@@ -74,6 +80,34 @@ class Enemy {
         // Place all enemy objects in an array called allEnemies
         // Place the player object in a variable called player
         /*array; allEnemies = [ new Enemy(-8, 60, 3), new Enemy(0, 140, 10), new Enemy(-5, 300, 15)]; */
+        
+        // creating the enemies and putting them in the array
+
+        var allEnemies = [];
+
+        function createEnemies(numEnemies = 3){
+    for (var i = 0; i < numEnemies; i++) {
+    enemy = new Enemy;
+
+    //position enemy
+    enemy.x = getRandomInt(canvasWidth/4) * (-1) - tileWidth;
+    if (i > 2) {
+        enemy.row = getRandomInt(3) + 1;
+    }
+    else {
+        enemy.row = i + 1;
+    }
+    enemy.y = (enemy.row + 1) * tileHeight - entityOffsetY;
+    enemy.speed = 1 + (getRandomInt(5)/15) - (getRandomInt(5)/5) + gameLevel/4;
+    allEnemies.push(enemy);
+}
+}
+
+        allEnemies.prototype.render = function () {
+            ctx.drawImage(Resources.get(this.sprite), this.x, this.row * tileHeight - entityOffsetY);
+        };
+        
+        
         array;
         player = new Player(200, 380);
         /*var Player = []; */
