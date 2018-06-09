@@ -7,17 +7,19 @@
 
 /*
 let gameOver = false;  */
+
+
+
+
 /*
-window.onload = function() {
-  init();
-}  */
-const canvasWidth = 1000;
+
+
 const tileWidth = 200; // required metric
 const tileHeight = 160; // required metric
-
+*/
 // calculation
-const entityOffsetY = tileHeight, entityOffsetX = tileWidth/2;
-
+/*const entityOffsetY = tileHeight, entityOffsetX = tileWidth/2;
+*/
 
 class Enemy {
     constructor() {
@@ -44,21 +46,21 @@ class Enemy {
         {
             this.x += 100 * this.speed * dt;
             //collision detection
-            if (parseInt(this.x) + 100 >= playerX && parseInt(this.x) <= playerX + 40 &&
+            if (parseInt(this.x) + 100 >= enemyX && parseInt(this.x) <= playerX + 40 &&
                 this.y === playerY) {
                 console.log("Game over :-()");
                 player.reset();
                 window.alert("Game Over");
             }
             ;
-           /* var allEnemies = [];
+           var allEnemies = [];
             allEnemies.push(enemy);
-            const eBug1 = new Enemy(0, 220, 60);
-            render();
-            {
-                ctx.drawImage(Resources.get(this.sprite), this.x, this.row * tileHeight - entityOffsetY);
+            const newEnemy = new Enemy(0, 220, 60);
+            newEnemy.prototype.render() = function() {
+            
+                ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
             }
-            ;   */
+            ;   
         }
         ;
         //Player class: 
@@ -83,22 +85,22 @@ class Enemy {
         
         // creating the enemies and putting them in the array
 
-        var allEnemies = [];
+        /*var allEnemies = [];
 
      function createEnemies(numEnemies = 3){
     for (var i = 0; i < numEnemies; i++) {
-    enemy = new Enemy;
+    enemy = new Enemy;  */
 
     //position enemy
-    enemy.x = getRandomInt(canvasWidth/4) * (-1) - tileWidth;
+   /* enemy.x = getRandomInt(canvasWidth/4) * (-1) - tileWidth;
 
         allEnemies.prototype.render = function () {
             ctx.drawImage(Resources.get(this.sprite), this.x, this.row * tileHeight - entityOffsetY);
         };
+        */
         
-        
-        /*array;
-        player = new Player(200, 380); */
+        array;
+        player = new Player(200, 380); 
         var Player = []; 
         // This listens for key presses and sends the keys to your
         // Player.handleInput() method. You don't need to modify this.
@@ -114,6 +116,7 @@ class Enemy {
         }); */
         init();
         gameStarted() = true;
+        renderEntities(); 
 /*
         superClass;
         init();
@@ -122,4 +125,4 @@ class Enemy {
         }
     }
 }}}}}
-*/}}}}}}
+*/}}}}
