@@ -97,9 +97,9 @@ class Enemy {
         };
         
         
-        array;
-        player = new Player(200, 380);
-        /*var Player = []; */
+        /*array;
+        player = new Player(200, 380); */
+        var Player = []; 
         // This listens for key presses and sends the keys to your
         // Player.handleInput() method. You don't need to modify this.
         /*document.addEventListener('keyup', function(e) {
@@ -112,6 +112,9 @@ class Enemy {
         
             player.handleInput(allowedKeys[e.keyCode]);
         }); */
+        init();
+        gameStarted() = true;
+/*
         superClass;
         init();
         {
@@ -119,3 +122,4 @@ class Enemy {
         }
     }
 }}}}}
+*/}}}}}}
