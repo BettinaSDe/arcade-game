@@ -53,14 +53,7 @@ class Enemy {
                 window.alert("Game Over");
             }
             ;
-           var allEnemies = [];
-            allEnemies.push(enemy);
-            const newEnemy = new Enemy(0, 220, 60);
-            newEnemy.prototype.render() = function() {
-            
-                ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-            }
-            ;   
+              
         }
         ;
         //Player class: 
@@ -74,7 +67,7 @@ class Enemy {
             this.runs = runs;
             this.hit = hit;
             Player.prototype.render() = function () {
-                ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+                ctx.drawImage(Resources.get(this.sprite), this.col, this.row);
             };
         }
         ;
@@ -84,7 +77,14 @@ class Enemy {
         /*array; allEnemies = [ new Enemy(-8, 60, 3), new Enemy(0, 140, 10), new Enemy(-5, 300, 15)]; */
         
         // creating the enemies and putting them in the array
-
+        var allEnemies = [];
+            allEnemies.push(enemy);
+            const newEnemy = new Enemy(0, 220, 60);
+            newEnemy.prototype.render() = function() {
+            
+                ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+            }
+            ;
         /*var allEnemies = [];
 
      function createEnemies(numEnemies = 3){
@@ -99,12 +99,12 @@ class Enemy {
         };
         */
         
-        array;
-        player = new Player(200, 380); 
-        var Player = []; 
+        
+        var player = []; 
+         
         // This listens for key presses and sends the keys to your
         // Player.handleInput() method. You don't need to modify this.
-        /*document.addEventListener('keyup', function(e) {
+        document.addEventListener('keyup', function(e) {
             var allowedKeys = {
                 37: 'left',
                 38: 'up',
@@ -113,7 +113,7 @@ class Enemy {
             };
         
             player.handleInput(allowedKeys[e.keyCode]);
-        }); */
+        }); 
         init();
         gameStarted() = true;
         renderEntities(); 
