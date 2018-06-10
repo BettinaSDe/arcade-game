@@ -97,9 +97,17 @@ var Engine = (function(global) {
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
         });
-        allEnemies.push();
+        player.push();
     }
+/*
 
+    function updateEntities(dt) {
+        allEnemies.forEach(function(enemy) {
+            enemy.update(dt);
+        });
+        player.update();
+    }
+*/
     /* This function initially draws the "game level", it will then call
      * the renderEntities function. Remember, this function is called every
      * game tick (or loop of the game engine) because that's how games work -
@@ -157,8 +165,17 @@ var Engine = (function(global) {
             enemy.render();
         });
 
-        player.push();
+        player.forEach(function(player) {
+            player.render();
+        });
+
+        /*player.push();  */
     }
+
+
+
+
+
 
     /* This function does nothing but it could have been a good place to
      * handle game reset states - maybe a new game menu or a game over screen

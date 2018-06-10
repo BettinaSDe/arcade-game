@@ -20,6 +20,17 @@ const tileHeight = 160; // required metric
 // calculation
 /*const entityOffsetY = tileHeight, entityOffsetX = tileWidth/2;
 */
+var canvasWidth = 505;
+var playerCoordinateInitiate = {
+    x : 200,
+    y : 380
+};
+
+var enemyCoordinateInitiate = {
+    x : -100,
+    y : 55,
+    v : 50
+};
 
 class Enemy {
     constructor() {
@@ -77,7 +88,7 @@ class Enemy {
         /*array; allEnemies = [ new Enemy(-8, 60, 3), new Enemy(0, 140, 10), new Enemy(-5, 300, 15)]; */
         
         // creating the enemies and putting them in the array
-        var allEnemies = [];
+        /*var allEnemies = [];
             allEnemies.push(enemy);
             const newEnemy = new Enemy(0, 220, 60);
             newEnemy.prototype.render() = function() {
@@ -99,9 +110,33 @@ class Enemy {
         };
         */
         
-        
+        /*
         var player = []; 
-         
+         */
+
+        var allEnemies = [
+            new Enemy(enemyCoordinateInitiate.x,
+                enemyCoordinateInitiate.y,
+                Math.random() * 100 + enemyCoordinateInitiate.v),
+            new Enemy(enemyCoordinateInitiate.x,
+                enemyCoordinateInitiate.y + verticStep,
+                Math.random() * 100 + enemyCoordinateInitiate.v),
+            new Enemy(enemyCoordinateInitiate.x,
+                enemyCoordinateInitiate.y + verticStep * 2,
+                Math.random() *100 + enemyCoordinateInitiate.v)];
+        //enemy
+        for(var i = allEnemies.length + 1; i <= enemyNum; i++){
+            var timeInterval = basicTime + randTime * Math.random() * 10;
+            console.log(timeInterval);
+            setTimeout(function(){
+                allEnemies.push(
+                    new Enemy(enemyCoordinateInitiate.x,
+                        enemyCoordinateInitiate.y + (Math.floor(Math.random() * 3)) * verticStep,
+                        Math.random() * 100 + enemyCoordinateInitiate.v))
+            },timeInterval)
+        }
+        var player = new Player(playerCoordinateInitiate.x,playerCoordinateInitiate.y);
+        
         // This listens for key presses and sends the keys to your
         // Player.handleInput() method. You don't need to modify this.
         document.addEventListener('keyup', function(e) {
