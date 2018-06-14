@@ -30,7 +30,7 @@ var Enemy = function (x, y, speed) {
     this.speed = speed;
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
-    this.sprite = 'images/heart.png';
+    this.sprite = 'images/Heart.png';
 };
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
