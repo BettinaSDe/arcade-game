@@ -14,7 +14,8 @@ document.body.appendChild(statsBoardLives);
 var count = document.querySelector("h1");
 // game description popup
 function instruct() {
-    alert('ARCADE: CROSS IT THREE TIMES FOR A SURPRISE!');
+    document.querySelector('button').onclick = function() {alert('ARCADE: CROSS IT THREE TIMES FOR A SURPRISE!')}
+    // alert('ARCADE: CROSS IT THREE TIMES FOR A SURPRISE!');
 }
 // define variables for points and lives
 var score = 0;
